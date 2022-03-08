@@ -4,14 +4,16 @@ import {Link} from 'react-router-dom'
 import { HomeOutlined,MoneyCollectOutlined,BulbOutlined,FundOutlined, MenuOutlined} from '@ant-design/icons'
 import icon from '../images/logo.png'
 
+const {Title} = Typography;
+
 const Navbar = () => {
   return (
     <div className="nav-container">
         <div className="logo-container">
             <Avatar src={icon} size="large" />
-            <Typography.Title level={2} className="logo">
+            <Title level={2} className="logo">
                 <Link to="/">Cryptoverse</Link>
-            </Typography.Title>
+            </Title>
             {/* <Button className="menu-control-container"></Button> */}
         </div>
         <Menu theme="dark">

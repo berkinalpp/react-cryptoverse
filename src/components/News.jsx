@@ -4,7 +4,6 @@ import moment from "moment";
 
 import {useGetCryptoNewsQuery} from "../services/cryptoNewsApi";
 import {useGetCryptosQuery} from '../services/cryptoApi'
-import {ConsoleSqlOutlined} from "@ant-design/icons";
 
 const {Title, Text} = Typography;
 const {Option} = Select;
@@ -17,6 +16,9 @@ const News = ({simplified}) => {
   });
   const demoImage =
     "http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg";
+
+    if(isFetching) return <Spin tip="Loading..."></Spin>
+
   return (
     <Row gutter={[16, 16]}>
       {!simplified && (

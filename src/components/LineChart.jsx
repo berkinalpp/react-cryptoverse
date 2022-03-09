@@ -7,7 +7,6 @@ const { Title } = Typography;
 
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
-
   Chart.register(...registerables);
   const coinPrice = [];
   const coinTimestamp = [];

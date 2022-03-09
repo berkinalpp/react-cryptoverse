@@ -50,7 +50,7 @@ const Cryptodetails = () => {
             </p>
         </Col>
         <Select defaultValue="7d" className="select-timeperiod" placeholder="Select time period" onChange={(value) => setTimePeriod(value)}>
-          {time.map((date) => <Option key={date}>{date}</Option>) }
+          {time.map((date,i) => <Option key={i}>{date}</Option>) }
           </Select>
           <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
           <Col className="stats-container">
@@ -63,8 +63,8 @@ const Cryptodetails = () => {
                           An overviews showing the stats of {cryptoDetails?.name}
                         </p>
                     </Col>
-                    {stats.map(({title,value,icon}) => (
-                      <Col className='coin-stats'>
+                    {stats.map(({title,value,icon},i) => (
+                      <Col className='coin-stats' key ={i}>
                         <Col className="coin-stats-name">
                             <Text>{icon}</Text>
                             <Text>{title}</Text>
@@ -82,8 +82,8 @@ const Cryptodetails = () => {
                           An overviews showing the stats of all cryptocurrencies
                         </p>
                     </Col>
-                    {genericStats.map(({title,value,icon}) => (
-                      <Col className='coin-stats'>
+                    {genericStats.map(({title,value,icon},i) => (
+                      <Col className='coin-stats' key={i}>
                         <Col className="coin-stats-name">
                             <Text>{icon}</Text>
                             <Text>{title}</Text>

@@ -34,19 +34,20 @@ const News = ({simplified}) => {
             }
           >
             {cryptoList?.data?.coins.map((coin) => (
-              <Option value={coin.name}>{coin.name}</Option>
+              <Option value={coin.name} key ={coin.uuid}>{coin.name}</Option>
             ))}
            
             </Select>
         </Col>
       )}
       {cryptoNews?.value.map((news, i) => (
-        <Col xs={24} sm={12} lg={8} key={i}>
+        <Col xs={24} sm={12} lg={8} key={i} >
           <Card
             loading={isFetching}
             style={{maxHeight: "95%"}}
             hoverable
             className="news-card"
+            
           >
             <a href={news.url} target="_blank" rel="noreferrer">
               <div className="news-image-container">

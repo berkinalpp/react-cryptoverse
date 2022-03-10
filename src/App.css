@@ -375,3 +375,10 @@ a:hover {
   padding: 20px;
   align-items: center;
 }
+
+/* ANT DESİGN CSS */
+
+.ant-table-tbody > tr > td {
+  height: 6rem;
+  padding: 4px;
+}
